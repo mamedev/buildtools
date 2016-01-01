@@ -5,6 +5,10 @@
 Just download [msys64-2016-01-01.exe](https://github.com/mamedev/buildtools/releases/download/1.0/msys64-2016-01-01.exe) if you are on 64-bit Windows
 or [msys32-2016-01-01.exe](https://github.com/mamedev/buildtools/releases/download/1.0/msys32-2016-01-01.exe) is you are on 32 bit Windows.
 
+If you are installing it on other location then default (c:\msys64 or c:\msys32) after you unpack just run : **autorebase.bat**
+
+For simple terminal use **buildtools.bat**  to start, for fancy looking one **conemu.bat**
+
 # Manual steps
 
 1. Download MSYS2. You can do that by downloading from http://msys2.github.io/ or
