@@ -97,3 +97,15 @@ To update anytime in future just use:
    ```
    pacman -S mingw-w64-i686-ccache 
    ```
+
+4. Wish to compile with Clang, go ahead and download:
+ 
+   For x64
+   ```
+   pacman -S mingw-w64-x86_64-clang mingw-w64-x86_64-clang-analyzer mingw-w64-x86_64-clang-tools-extra 
+   ```
+
+   For x86
+   ```
+   pacman -S mingw-w64-i686-clang mingw-w64-i686-clang-analyzer mingw-w64-i686-clang-tools-extra
+   ```
