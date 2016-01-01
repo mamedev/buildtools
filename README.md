@@ -59,13 +59,26 @@ To update anytime in future just use:
 
    For x64
    ```
-   pacman -S mingw-w64-x86_64-qt5 mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_ttf
+   pacman -S mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_ttf
    ```
 
    For x86
    ```
-   pacman -S mingw-w64-i686-qt5 mingw-w64-i686-SDL2 mingw-w64-i686-SDL2_ttf
+   pacman -S mingw-w64-i686-SDL2 mingw-w64-i686-SDL2_ttf
    ```
+
+2. If you wish building with QT5 debugger would need this :
+
+   For x64
+   ```
+   pacman -S mingw-w64-x86_64-qt5
+   ```
+
+   For x86
+   ```
+   pacman -S mingw-w64-i686-qt5
+   ```
+
 
 2. To be able to generate documentation use:
 
