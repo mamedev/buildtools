@@ -35,6 +35,7 @@ For simple terminal use **buildtools.bat**  to start, for fancy looking one **co
    ```
    cd /
    wget https://raw.githubusercontent.com/mamedev/buildtools/master/buildtools.bat
+   wget https://raw.githubusercontent.com/mamedev/buildtools/master/conemu.bat
    exit
    ```
 8. Start  ```buildtools.bat ``` from installed folder (by default it is C:\msys64 or c:\msys32)
