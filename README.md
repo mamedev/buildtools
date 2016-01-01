@@ -5,48 +5,82 @@
 2. Run installation and let it finish and start command prompt, change default location by your needs
 3. Update initial installation
 
-  ```
-  pacman --needed -Sy bash pacman pacman-mirrors msys2-runtime
-  ```
+   ```
+   pacman --needed -Sy bash pacman pacman-mirrors msys2-runtime
+   ```
 4. Type exit to close current window and start "MSYS2 Shell" again
 5. Now upgrade rest of packages
 
-  ```
-  pacman -Su
-  ```
+   ```
+   pacman -Su
+   ```
 6. Install ConEmu console,make, wget and git tools
 
-  ```
-  pacman -S conemu-git make wget git
-  ```
+   ```
+   pacman -S conemu-git make wget git
+   ```
 7. Go to top folder and download new startup batch file, and exit 
 
-  ```
-  cd /
-  wget https://raw.githubusercontent.com/mamedev/buildtools/master/buildtools.bat
-  exit
-  ```
+   ```
+   cd /
+   wget https://raw.githubusercontent.com/mamedev/buildtools/master/buildtools.bat
+   exit
+   ```
 8. Start  ```buildtools.bat ``` from installed folder (by default it is C:\msys64 or c:\msys32)
 9. Now it is time to install mingw and python
 
-    For x64
-  ```
-  pacman -S mingw-w64-x86_64-gcc python
-  ```
+   For x64
+   ```
+   pacman -S mingw-w64-x86_64-gcc python
+   ```
 
-    For x86
-  ```
-  pacman -S mingw-w64-i686-gcc python
-  ```
+   For x86
+   ```
+   pacman -S mingw-w64-i686-gcc python
+   ```
 
 10. Download MAME source
 
-  ```
-  git clone https://github.com/mamedev/mame.git
-  ```
+   ```
+   git clone https://github.com/mamedev/mame.git
+   ```
 
-11. To update anytime in future just use:
+# Update of packages
 
-  ```
-  pacman -Su
-  ```
+To update anytime in future just use:
+
+   ```
+   pacman -Su
+   ```
+
+# Optional packages
+
+1. If you wish building SDL build you would need this :
+
+   For x64
+   ```
+   pacman -S mingw-w64-x86_64-qt5 mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_ttf
+   ```
+
+   For x86
+   ```
+   pacman -S mingw-w64-i686-qt5 mingw-w64-i686-SDL2 mingw-w64-i686-SDL2_ttf
+   ```
+
+2. To be able to generate documentation use:
+
+   ```
+   pacman -S doxygen 
+   ```
+
+3. To be able to use ccache to speed-up compiling 
+
+   For x64
+   ```
+   pacman -S mingw-w64-x86_64-ccache 
+   ```
+
+   For x86
+   ```
+   pacman -S mingw-w64-i686-ccache 
+   ```
