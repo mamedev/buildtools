@@ -14,10 +14,10 @@
   ```
   pacman -Su
   ```
-6. Install ConEmu console and wget and git tools
+6. Install ConEmu console,make, wget and git tools
 
   ```
-  pacman -S conemu-git wget git
+  pacman -S conemu-git make wget git
   ```
 7. Go to top folder and download new startup batch file, and exit 
 
