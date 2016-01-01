@@ -29,12 +29,12 @@
 8. Start  ```buildtools.bat ``` from installed folder (by default it is C:\msys64 or c:\msys32)
 9. Now it is time to install mingw and python
 
-   For x64
+   **For x64**
    ```
    pacman -S mingw-w64-x86_64-gcc python
    ```
 
-   For x86
+   **For x86**
    ```
    pacman -S mingw-w64-i686-gcc python
    ```
@@ -57,55 +57,67 @@ To update anytime in future just use:
 
 1. If you wish building SDL build you would need this :
 
-   For x64
+   **For x64**
    ```
    pacman -S mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_ttf
    ```
 
-   For x86
+   **For x86**
    ```
    pacman -S mingw-w64-i686-SDL2 mingw-w64-i686-SDL2_ttf
    ```
 
 2. If you wish building with QT5 debugger would need this :
 
-   For x64
+   **For x64**
    ```
    pacman -S mingw-w64-x86_64-qt5
    ```
 
-   For x86
+   **For x86**
    ```
    pacman -S mingw-w64-i686-qt5
    ```
 
+3. If you to use QT4 for QMC2 or smilar :
 
-2. To be able to generate documentation use:
+   **For x64**
+   ```
+   pacman -S mingw-w64-x86_64-qt4
+   ```
+
+   **For x86**
+   ```
+   pacman -S mingw-w64-i686-qt4
+   ```
+
+
+4. To be able to generate documentation use:
 
    ```
    pacman -S doxygen 
    ```
 
-3. To be able to use ccache to speed-up compiling 
+5. To be able to use ccache to speed-up compiling 
 
-   For x64
+   **For x64**
    ```
    pacman -S mingw-w64-x86_64-ccache 
    ```
 
-   For x86
+   **For x86**
    ```
    pacman -S mingw-w64-i686-ccache 
    ```
 
-4. Wish to compile with Clang, go ahead and download:
+6. Wish to compile with Clang, go ahead and download **STIL EXPERIMENTAL**:
  
-   For x64
+   **For x64**
    ```
    pacman -S mingw-w64-x86_64-clang mingw-w64-x86_64-clang-analyzer mingw-w64-x86_64-clang-tools-extra 
    ```
 
-   For x86
+   **For x86**
    ```
    pacman -S mingw-w64-i686-clang mingw-w64-i686-clang-analyzer mingw-w64-i686-clang-tools-extra
    ```
