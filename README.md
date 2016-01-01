@@ -110,7 +110,7 @@ To update anytime in future just use:
    pacman -S mingw-w64-i686-ccache 
    ```
 
-6. Wish to compile with Clang, go ahead and download **STIL EXPERIMENTAL**:
+6. Wish to compile with Clang, go ahead and download **STILL EXPERIMENTAL**:
  
    **For x64**
    ```
