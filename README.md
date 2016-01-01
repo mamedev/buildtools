@@ -1,5 +1,12 @@
 # MAME Build Tools
 
+# Automatic installers
+
+Just download [msys64-2016-01-01.exe](https://github.com/mamedev/buildtools/releases/download/1.0/msys64-2016-01-01.exe) if you are on 64-bit Windows
+or [msys32-2016-01-01.exe](https://github.com/mamedev/buildtools/releases/download/1.0/msys32-2016-01-01.exe) is you are on 32 bit Windows.
+
+# Manual steps
+
 1. Download MSYS2. You can do that by downloading from http://msys2.github.io/ or
    from our mirror [for 64-bit Windows](https://github.com/mamedev/buildtools/releases/download/1.0/msys2-x86_64-20150916.exe) or [for 32-bit Windows](https://github.com/mamedev/buildtools/releases/download/1.0/msys2-i686-20150916.exe)
 2. Run installation and let it finish and start command prompt, change default location by your needs
