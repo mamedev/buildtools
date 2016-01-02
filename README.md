@@ -122,7 +122,7 @@ To be able to use ccache to speed-up (re)compilation
 
 <a name="optional-clang"/>
 ### Clang
-If you wish to compilelink with the alternative Clang, go ahead and download **STILL EXPERIMENTAL**:
+If you wish to compile/link with the alternative Clang, go ahead and download **STILL EXPERIMENTAL**:
  
    **For x64**
    ```sh
