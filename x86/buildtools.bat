@@ -23,6 +23,7 @@ rem ember that we get here even in command.com.
 if NOT EXIST %WD%opt\bin\CmdInit.cmd  %WD%usr\bin\touch.exe > %WD%opt\bin\CmdInit.cmd 
 
 if NOT EXIST %WD%msys-2.0.dll set WD=%~dp0usr\bin\
+if EXIST %WD%sh.exe.old move /Y %WD%sh.exe.old %WD%sh.exe
 set MSYSTEM=MINGW32
 set MINGW32=/mingw32
 set MINGW64=/mingw64
