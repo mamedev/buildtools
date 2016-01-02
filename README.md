@@ -22,8 +22,8 @@ Various modules are disabled by default, such as the MAME interactive debugger, 
 <a name="automatic"/>
 ## Automatic installer
 
-Download [msys64-2016-01-01.exe](https://github.com/mamedev/buildtools/releases/download/1.0/msys64-2016-01-01.exe) if you are on 64-bit Windows
-or [msys32-2016-01-01.exe](https://github.com/mamedev/buildtools/releases/download/1.0/msys32-2016-01-01.exe) is you are on 32 bit Windows.
+Download [msys64-2016-01-02.exe](https://github.com/mamedev/buildtools/releases/download/1.1/msys64-2016-01-02.exe) if you are on 64-bit Windows
+or [msys32-2016-01-02.exe](https://github.com/mamedev/buildtools/releases/download/1.1/msys32-2016-01-02.exe) is you are on 32 bit Windows.
 
 If you are installing it in a location other than the default (*c:\msys64* or *c:\msys32*), after you unpack double-click : **autorebase.bat**
 
