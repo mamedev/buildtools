@@ -24,10 +24,13 @@ Various modules are disabled by default, such as the MAME interactive debugger, 
 
 Download [msys64-2016-01-02.exe](https://github.com/mamedev/buildtools/releases/download/1.1/msys64-2016-01-02.exe) if you are on 64-bit Windows
 or [msys32-2016-01-02.exe](https://github.com/mamedev/buildtools/releases/download/1.1/msys32-2016-01-02.exe) is you are on 32 bit Windows.
+If you are on 64-bit Windows but wish to produce binaries for both 32-bit and 64-bit download [msys64-32-2016-01-02.exe](https://github.com/mamedev/buildtools/releases/download/1.1/msys64-32-2016-01-02.exe)
 
 If you are installing it in a location other than the default (*c:\msys64* or *c:\msys32*), after you unpack double-click : **autorebase.bat**
 
 For a simple terminal use **buildtools.bat**  to start. For a fancy looking one use **conemu.bat**. For more information about Msys2, see [MSYS2 Introduction](http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/).
+
+In case you wish to use non-posix environment there are two additional batch files: **win32env.bat** for regular windows console, and **win32con.bat** for fancy looking conemu console.
 
 Then, to download the MAME source under your Msys2 user's homedir:
 ```sh
@@ -177,10 +180,18 @@ If you wish to compile/link with the alternative Clang, go ahead and download **
 
 8. Go to root folder and download MAME development environment shell scripts
 
+   
+   **For x86**
    ```sh
    cd /
-   wget https://raw.githubusercontent.com/mamedev/buildtools/master/buildtools.bat
-   wget https://raw.githubusercontent.com/mamedev/buildtools/master/conemu.bat
+   git clone https://github.com/mamedev/buildtools_x86.git .
+   exit
+   ```
+
+   **For x64**
+   ```sh
+   cd /
+   git clone https://github.com/mamedev/buildtools_x64.git .
    exit
    ```
 
