@@ -147,6 +147,7 @@ If you wish to compile/link with the alternative Clang, go ahead and download **
    ```sh
    pacman --needed -Sy bash pacman pacman-mirrors msys2-runtime
    ```
+
 4. Type `exit` to close current window and start "MSYS2 Shell" again 
 
 5. Now upgrade already installed packages to current
@@ -154,22 +155,14 @@ If you wish to compile/link with the alternative Clang, go ahead and download **
    ```sh
    pacman -Su
    ```
+
 6. Install ConEmu console, `make`, `wget` and `git` tools
 
    ```sh
    pacman -S conemu-git make wget git
    ```
-7. Go to root folder and download MAME development environment shell scripts
 
-   ```sh
-   cd /
-   wget https://raw.githubusercontent.com/mamedev/buildtools/master/buildtools.bat
-   wget https://raw.githubusercontent.com/mamedev/buildtools/master/conemu.bat
-   exit
-   ```
-8. Start  ```buildtools.bat``` from installed folder (by default it is *C:\msys64* or *c:\msys32*)
-
-9. Now it is time to install `mingw` and `python`
+7. Install `mingw` and `python`
 
    **For x64**
    ```sh
@@ -180,3 +173,14 @@ If you wish to compile/link with the alternative Clang, go ahead and download **
    ```sh
    pacman -S mingw-w64-i686-gcc python
    ```
+
+8. Go to root folder and download MAME development environment shell scripts
+
+   ```sh
+   cd /
+   wget https://raw.githubusercontent.com/mamedev/buildtools/master/buildtools.bat
+   wget https://raw.githubusercontent.com/mamedev/buildtools/master/conemu.bat
+   exit
+   ```
+
+9. Finally, start  ```buildtools.bat``` from installed folder (by default it is *C:\msys64* or *c:\msys32*)
