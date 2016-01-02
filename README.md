@@ -163,16 +163,16 @@ If you wish to compile/link with the alternative Clang, go ahead and download **
    pacman -S conemu-git make wget git
    ```
 
-7. Install `mingw` and `python`
+7. Install `mingw` and `gdb` including `python`
 
    **For x64**
    ```sh
-   pacman -S mingw-w64-x86_64-gcc python
+   pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-gdb
    ```
 
    **For x86**
    ```sh
-   pacman -S mingw-w64-i686-gcc python
+   pacman -S mingw-w64-i686-gcc mingw-w64-i686-gdb
    ```
 
 8. Go to root folder and download MAME development environment shell scripts
