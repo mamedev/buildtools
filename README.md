@@ -24,47 +24,10 @@ And finally to build:
 make
 ```
 
-## Manual steps
+## Updating build tools
 
-1. Download MSYS2. You can do that by downloading from http://msys2.github.io/ or
-   from our mirror [for 64-bit Windows](https://github.com/mamedev/buildtools/releases/download/1.0/msys2-x86_64-20150916.exe) or [for 32-bit Windows](https://github.com/mamedev/buildtools/releases/download/1.0/msys2-i686-20150916.exe)
-2. Run the installer (location can be changed to suite) and let it complete and it will launch an Msys shell
-3. Update initial installation
-   ```
-   pacman --needed -Sy bash pacman pacman-mirrors msys2-runtime
-   ```
-4. Type `exit` to close current window and start "MSYS2 Shell" again 
-5. Now upgrade already installed packages to current
-   ```sh
-   pacman -Su
-   ```
-6. Install ConEmu console, `make`, `wget` and `git` tools
-   ```sh
-   pacman -S conemu-git make wget git
-   ```
-7. Go to root folder and download MAME development environment shell scripts
-   ```sh
-   cd /
-   wget https://raw.githubusercontent.com/mamedev/buildtools/master/buildtools.bat
-   wget https://raw.githubusercontent.com/mamedev/buildtools/master/conemu.bat
-   exit
-   ```
-8. Start  ```buildtools.bat``` from installed folder (by default it is *C:\msys64* or *c:\msys32*)
-9. Now it is time to install `mingw` and `python`
-
-   **For x64**
-   ```
-   pacman -S mingw-w64-x86_64-gcc python
-   ```
-
-   **For x86**
-   ```
-   pacman -S mingw-w64-i686-gcc python
-   ```
-
-## Update of packages
-
-To update all installed packages using the Msys2 package manager:
+Similar to package managers on Linux like apt-get, yum etc. Msys2 can automatically update packages for fixes, security updates etc.
+To update all installed packages to current:
 
    ```
    pacman -Su
@@ -142,4 +105,41 @@ If you wish to compilelink with the alternative Clang, go ahead and download **S
    **For x86**
    ```
    pacman -S mingw-w64-i686-clang mingw-w64-i686-clang-analyzer mingw-w64-i686-clang-tools-extra
+   ```
+## Manual steps
+
+1. Download MSYS2. You can do that by downloading from http://msys2.github.io/ or
+   from our mirror [for 64-bit Windows](https://github.com/mamedev/buildtools/releases/download/1.0/msys2-x86_64-20150916.exe) or [for 32-bit Windows](https://github.com/mamedev/buildtools/releases/download/1.0/msys2-i686-20150916.exe)
+2. Run the installer (location can be changed to suite) and let it complete and it will launch an Msys shell
+3. Update initial installation
+   ```
+   pacman --needed -Sy bash pacman pacman-mirrors msys2-runtime
+   ```
+4. Type `exit` to close current window and start "MSYS2 Shell" again 
+5. Now upgrade already installed packages to current
+   ```sh
+   pacman -Su
+   ```
+6. Install ConEmu console, `make`, `wget` and `git` tools
+   ```sh
+   pacman -S conemu-git make wget git
+   ```
+7. Go to root folder and download MAME development environment shell scripts
+   ```sh
+   cd /
+   wget https://raw.githubusercontent.com/mamedev/buildtools/master/buildtools.bat
+   wget https://raw.githubusercontent.com/mamedev/buildtools/master/conemu.bat
+   exit
+   ```
+8. Start  ```buildtools.bat``` from installed folder (by default it is *C:\msys64* or *c:\msys32*)
+9. Now it is time to install `mingw` and `python`
+
+   **For x64**
+   ```
+   pacman -S mingw-w64-x86_64-gcc python
+   ```
+
+   **For x86**
+   ```
+   pacman -S mingw-w64-i686-gcc python
    ```
