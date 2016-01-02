@@ -22,16 +22,16 @@ Various modules are disabled by default, such as the MAME interactive debugger, 
 <a name="automatic"/>
 ## Automatic installer
 
-Download [msys64-2016-01-02.exe](https://github.com/mamedev/buildtools/releases/download/1.1/msys64-2016-01-02.exe) if you are on 64-bit Windows
-or [msys32-2016-01-02.exe](https://github.com/mamedev/buildtools/releases/download/1.1/msys32-2016-01-02.exe) is you are on 32 bit Windows.
-If you are on 64-bit Windows but wish to produce binaries for both 32-bit and 64-bit download [msys64-32-2016-01-02.exe](https://github.com/mamedev/buildtools/releases/download/1.1/msys64-32-2016-01-02.exe)
+Download [msys64-2016-01-02.exe](https://github.com/mamedev/buildtools/releases/download/1.2/msys64-2016-01-03.exe) if you are on 64-bit Windows
+or [msys32-2016-01-02.exe](https://github.com/mamedev/buildtools/releases/download/1.2/msys32-2016-01-03.exe) is you are on 32 bit Windows.
+If you are on 64-bit Windows but wish to produce binaries for both 32-bit and 64-bit download [msys64-32-2016-01-02.exe](https://github.com/mamedev/buildtools/releases/download/1.2/msys64-32-2016-01-03.exe)
 To switch between different mingw versions use **config32.bat** and **config64.bat**
 
 If you are installing it in a location other than the default (*c:\msys64* or *c:\msys32*), after you unpack double-click : **autorebase.bat**
 
-For a simple terminal use **buildtools.bat**  to start. For a fancy looking one use **conemu.bat**. For more information about Msys2, see [MSYS2 Introduction](http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/).
-
 In case you wish to use non-posix environment there are two additional batch files: **win32env.bat** for regular windows console, and **win32con.bat** for fancy looking conemu console.
+
+For a simple terminal use **buildtools.bat**  to start. For a fancy looking one use **conemu.bat**. For more information about Msys2, see [MSYS2 Introduction](http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/). There are also **buildtools_32.bat** and **conemu_32.bat** enforcing mingw32 on 64-bit tools (makes sense if you use combined distribution).
 
 Since it can be that some of configuration file have altered, first pull latest from root of your tools:
 ```sh
