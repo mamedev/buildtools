@@ -14,9 +14,10 @@
 
 <a name="introduction"/>
 ## Introduction
-The MAME development environment for Windows consists of the GCC compiler (by way of MinGW), and the MSYS2 (POSIX/Unix compatability layer), plus various utilities such as Python and Git. It is available as a prepackaged installer, or can be assembled from upstream components. Various modules are disabled by default, such as the interactive debugger, but can be enabled through arguments when building.
+The MAME development environment for Windows consists of the GCC compiler (by way of MinGW), and the MSYS2 (POSIX/Unix compatability layer), plus various utilities such as Python and Git. It is available as a prepackaged installer, or can be assembled from upstream components. 
 
 Source control is handled by github (***https://github.com/mamedev/mame.git***), so you'll need to check out a copy.
+Various modules are disabled by default, such as the MAME interactive debugger, but can be enabled through arguments when building and may require additional MSYS2 packages to be installed.
 
 <a name="automatic"/>
 ## Automatic installer
