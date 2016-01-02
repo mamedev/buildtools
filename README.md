@@ -14,7 +14,7 @@
 
 <a name="introduction"/>
 ## Introduction
-The MAME development environment for Windows consists of the GCC compiler (by way of MinGW), and the Msys2 (POSIX/Unix compatability layer), plus various utilities such as Python and Git. It is available as a prepackaged installer, or can be assembled from upstream components. Various modules are disabled by default, such as the interactive debugger, but can be enabled through arguments when building.
+The MAME development environment for Windows consists of the GCC compiler (by way of MinGW), and the MSYS2 (POSIX/Unix compatability layer), plus various utilities such as Python and Git. It is available as a prepackaged installer, or can be assembled from upstream components. Various modules are disabled by default, such as the interactive debugger, but can be enabled through arguments when building.
 
 Source control is handled by github (***https://github.com/mamedev/mame.git***), so you'll need to check out a copy.
 
@@ -26,7 +26,7 @@ or [msys32-2016-01-01.exe](https://github.com/mamedev/buildtools/releases/downlo
 
 If you are installing it in a location other than the default (*c:\msys64* or *c:\msys32*), after you unpack double-click : **autorebase.bat**
 
-For a simple terminal use **buildtools.bat**  to start. For a fancy looking one use **conemu.bat**. For more information about Msys2, see http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/.
+For a simple terminal use **buildtools.bat**  to start. For a fancy looking one use **conemu.bat**. For more information about Msys2, see [MSYS2 Introduction](http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/).
 
 Then, to download the MAME source under your Msys2 user's homedir:
 ```sh
@@ -46,7 +46,7 @@ make
 <a name="updating"/>
 ## Updating build tools
 
-Similar to package managers on Linux like apt-get, yum etc. Msys2 can automatically update packages for fixes, security updates etc.
+Similar to package managers on Linux like apt-get, yum etc. MSYS2 can automatically update packages for fixes, security updates etc.
 To update all installed packages to current:
 
 ```sh
