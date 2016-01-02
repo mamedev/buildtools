@@ -1,5 +1,17 @@
 # MAME Build Tools
 
+##### Table of Contents  
+* [Automatic installer](#automatic)  
+* [Updating build tools](#updating)  
+* [Optional additional packages](#optional)  
+  * [SDL](#optional-sdl)  
+  * [QT5](#optional-qt5)  
+  * [QT4](#optional-qt4)  
+  * [CCache](#optional-ccache)  
+  * [DOxygen](#optional-doxygen)  
+* [Manual Steps](#manual)
+
+<a name="automatic"/>
 ## Automatic installer
 
 Download [msys64-2016-01-01.exe](https://github.com/mamedev/buildtools/releases/download/1.0/msys64-2016-01-01.exe) if you are on 64-bit Windows
@@ -24,6 +36,7 @@ And finally to build:
 make
 ```
 
+<a name="updating"/>
 ## Updating build tools
 
 Similar to package managers on Linux like apt-get, yum etc. Msys2 can automatically update packages for fixes, security updates etc.
@@ -33,8 +46,10 @@ To update all installed packages to current:
 pacman -Su
 ```
 
+<a name="optional"/>
 ## Optional additional packages
 
+<a name="optional-sdl"/>
 ### SDL
 If you wish to build with the SDL renderer:
 
@@ -48,6 +63,7 @@ If you wish to build with the SDL renderer:
    pacman -S mingw-w64-i686-SDL2 mingw-w64-i686-SDL2_ttf
    ```
 
+<a name="optional-qt5"/>
 ### QT5
 If you wish to build with the QT5 debugger:
 
@@ -61,6 +77,7 @@ If you wish to build with the QT5 debugger:
    pacman -S mingw-w64-i686-qt5
    ```
 
+<a name="optional-qt4"/>
 ### QT4
 If you with to build the QMC2 frontend or similar:
 
@@ -74,6 +91,7 @@ If you with to build the QMC2 frontend or similar:
    pacman -S mingw-w64-i686-qt4
    ```
 
+<a name="optional-doxygen"/>
 ### Doxygen
 To be able to generate the documentation from the source:
 
@@ -81,6 +99,7 @@ To be able to generate the documentation from the source:
    pacman -S doxygen 
    ```
 
+<a name="optional-ccache"/>
 ### CCache
 To be able to use ccache to speed-up (re)compilation
 
@@ -94,6 +113,7 @@ To be able to use ccache to speed-up (re)compilation
    pacman -S mingw-w64-i686-ccache 
    ```
 
+<a name="optional-clang"/>
 ### Clang
 If you wish to compilelink with the alternative Clang, go ahead and download **STILL EXPERIMENTAL**:
  
@@ -106,6 +126,8 @@ If you wish to compilelink with the alternative Clang, go ahead and download **S
    ```sh
    pacman -S mingw-w64-i686-clang mingw-w64-i686-clang-analyzer mingw-w64-i686-clang-tools-extra
    ```
+
+<a name="manual"/>
 ## Manual steps
 
 1. Download MSYS2. You can do that by downloading from http://msys2.github.io/ or
