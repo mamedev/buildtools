@@ -1,6 +1,7 @@
 # MAME Build Tools
 
 ##### Table of Contents  
+* [Introduction](#introduction)
 * [Automatic installer](#automatic)  
 * [Updating build tools](#updating)  
 * [Optional additional packages](#optional)  
@@ -11,6 +12,12 @@
   * [DOxygen](#optional-doxygen)  
 * [Manual Steps](#manual)
 
+<a name="introduction"/>
+## Introduction
+The MAME development environment for Windows consists of the GCC compiler (by way of MinGW), and the Msys2 (POSIX/Unix compatability layer), plus various utilities such as Python and Git. It is available as a prepackaged installer, or can be assembled from upstream components. Various modules are disabled by default, such as the interactive debugger, but can be enabled through arguments when building.
+
+Source control is handled by github (***https://github.com/mamedev/mame.git***), so you'll need to check out a copy.
+
 <a name="automatic"/>
 ## Automatic installer
 
@@ -19,7 +26,7 @@ or [msys32-2016-01-01.exe](https://github.com/mamedev/buildtools/releases/downlo
 
 If you are installing it in a location other than the default (*c:\msys64* or *c:\msys32*), after you unpack double-click : **autorebase.bat**
 
-For simple terminal use **buildtools.bat**  to start, for fancy looking one **conemu.bat**. For more information about Msys2, see http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/.
+For a simple terminal use **buildtools.bat**  to start. For a fancy looking one use **conemu.bat**. For more information about Msys2, see http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/.
 
 Then, to download the MAME source under your Msys2 user's homedir:
 ```sh
@@ -132,13 +139,16 @@ If you wish to compilelink with the alternative Clang, go ahead and download **S
 
 1. Download MSYS2. You can do that by downloading from http://msys2.github.io/ or
    from our mirror [for 64-bit Windows](https://github.com/mamedev/buildtools/releases/download/1.0/msys2-x86_64-20150916.exe) or [for 32-bit Windows](https://github.com/mamedev/buildtools/releases/download/1.0/msys2-i686-20150916.exe)
+
 2. Run the installer (location can be changed to suite) and let it complete and it will launch an Msys shell
+
 3. Update initial installation
 
    ```sh
    pacman --needed -Sy bash pacman pacman-mirrors msys2-runtime
    ```
 4. Type `exit` to close current window and start "MSYS2 Shell" again 
+
 5. Now upgrade already installed packages to current
 
    ```sh
@@ -158,6 +168,7 @@ If you wish to compilelink with the alternative Clang, go ahead and download **S
    exit
    ```
 8. Start  ```buildtools.bat``` from installed folder (by default it is *C:\msys64* or *c:\msys32*)
+
 9. Now it is time to install `mingw` and `python`
 
    **For x64**
