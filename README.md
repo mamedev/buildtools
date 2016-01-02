@@ -184,14 +184,22 @@ If you wish to compile/link with the alternative Clang, go ahead and download **
    **For x86**
    ```sh
    cd /
-   git clone https://github.com/mamedev/buildtools_x86.git .
+   git clone https://github.com/mamedev/buildtools_x86.git build
+   cd build
+   mv * ..
+   cd ..
+   rm -r -f build
    exit
    ```
 
    **For x64**
    ```sh
    cd /
-   git clone https://github.com/mamedev/buildtools_x64.git .
+   git clone https://github.com/mamedev/buildtools_x64.git build
+   cd build
+   mv * ..
+   cd ..
+   rm -r -f build
    exit
    ```
 
