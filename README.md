@@ -38,6 +38,17 @@ Since it can be that some of configuration file have altered, first pull latest 
 git pull
 ```
 
+**Important** thing is to setup your git environment first
+```sh
+git config --global core.autocrlf true
+```
+
+And if you are contributor
+```sh
+git config --global user.email=youremail@something.com
+git config --global user.name=FirstName Lastname
+```
+
 Then, to download the MAME source under your Msys2 user's homedir:
 ```sh
 git clone https://github.com/mamedev/mame.git
