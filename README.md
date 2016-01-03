@@ -46,7 +46,7 @@ git config --global core.autocrlf true
 And if you are contributor
 ```sh
 git config --global user.email=youremail@something.com
-git config --global user.name=FirstName Lastname
+git config --global user.name=Firstname Lastname
 ```
 
 Then, to download the MAME source under your Msys2 user's homedir:
