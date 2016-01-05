@@ -155,6 +155,15 @@ Used as build system for some other project that can be handy
    pacman -S mingw-w64-i686-cmake 
    ```
 
+   **To build in Windows environment use from build folder:**
+   ```sh
+   cmake -G "MinGW Makefiles" .. -DCMAKE_MAKE_PROGRAM=c:\msys64\win32\make.exe
+   ```
+   **To build in MSYS environment use from build folder:**
+   ```sh
+   cmake -G "MSYS Makefiles" ..
+   ```
+   
 <a name="optional-clang"/>
 ### Clang
 If you wish to compile/link with the alternative Clang, go ahead and download **STILL EXPERIMENTAL**:
