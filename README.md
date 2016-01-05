@@ -9,6 +9,7 @@
   * [QT5](#optional-qt5)  
   * [QT4](#optional-qt4)  
   * [CCache](#optional-ccache)  
+  * [CMake](#optional-cmake)  
   * [DOxygen](#optional-doxygen)  
 * [Manual Steps](#manual)
 
@@ -139,6 +140,19 @@ To be able to use ccache to speed-up (re)compilation
    **For x86**
    ```sh
    pacman -S mingw-w64-i686-ccache 
+   ```
+<a name="optional-ccache"/>
+### CMake
+Used as build system for some other project that can be handy
+
+   **For x64**
+   ```sh
+   pacman -S mingw-w64-x86_64-cmake 
+   ```
+
+   **For x86**
+   ```sh
+   pacman -S mingw-w64-i686-cmake 
    ```
 
 <a name="optional-clang"/>
