@@ -34,14 +34,14 @@ In case you wish to use non-posix environment there are two additional batch fil
 
 For a simple terminal use **buildtools.bat**  to start. For a fancy looking one use **conemu.bat**. For more information about Msys2, see [MSYS2 Introduction](http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/). There are also **buildtools_32.bat** and **conemu_32.bat** enforcing mingw32 on 64-bit tools (makes sense if you use combined distribution).
 
-Since it can be that some of configuration file have altered, first pull latest from root of your tools:
-```sh
-git pull
-```
-
 **Important** thing is to setup your git environment first
 ```sh
 git config --global core.autocrlf true
+```
+
+Since it can be that some of configuration file have altered, first pull latest from root of your tools:
+```sh
+git pull
 ```
 
 And if you are contributor
