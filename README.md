@@ -23,9 +23,9 @@ Various modules are disabled by default, such as the MAME interactive debugger, 
 <a name="automatic"/>
 ## Automatic installer
 
-Download [msys64-2016-01-04.exe](https://github.com/mamedev/buildtools/releases/download/1.3/msys64-2016-01-04.exe) if you are on 64-bit Windows
-or [msys32-2016-01-04.exe](https://github.com/mamedev/buildtools/releases/download/1.3/msys32-2016-01-04.exe) is you are on 32 bit Windows.
-If you are on 64-bit Windows but wish to produce binaries for both 32-bit and 64-bit download [msys64-32-2016-01-04.exe](https://github.com/mamedev/buildtools/releases/download/1.3/msys64-32-2016-01-04.exe)
+Download [msys64-2016-01-07.exe](https://github.com/mamedev/buildtools/releases/download/1.4/msys64-2016-01-07.exe) if you are on 64-bit Windows
+or [msys32-2016-01-07.exe](https://github.com/mamedev/buildtools/releases/download/1.4/msys32-2016-01-07.exe) is you are on 32 bit Windows.
+If you are on 64-bit Windows but wish to produce binaries for both 32-bit and 64-bit download [msys64-32-2016-01-07.exe](https://github.com/mamedev/buildtools/releases/download/1.4/msys64-32-2016-01-07.exe)
 To switch between different mingw versions use **config32.bat** and **config64.bat**
 
 If you are installing it in a location other than the default (*c:\msys64* or *c:\msys32*), after you unpack double-click : **autorebase.bat**
