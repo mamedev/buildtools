@@ -2,8 +2,9 @@
 
 ##### Table of Contents  
 * [Introduction](#introduction)
-* [Automatic installer](#automatic)  
+* [Installation and building](#installation)  
 * [Updating build tools](#updating)  
+* [Alternative Shells for advanced usage](#advanced)
 * [Optional additional packages](#optional)  
   * [SDL](#optional-sdl)  
   * [QT5](#optional-qt5)  
@@ -20,8 +21,8 @@ The MAME development environment for Windows consists of the GCC compiler (by wa
 Source control is handled by github (***https://github.com/mamedev/mame.git***), so you'll need to check out a copy.
 Various modules are disabled by default, such as the MAME interactive debugger, but can be enabled through arguments when building and may require additional MSYS2 packages to be installed.
 
-<a name="automatic"/>
-## Automatic installer
+<a name="installation"/>
+## Installation and building
 
 Download [msys64-2016-01-07.exe](https://github.com/mamedev/buildtools/releases/download/1.4/msys64-2016-01-07.exe) if you are on 64-bit Windows
 or [msys32-2016-01-07.exe](https://github.com/mamedev/buildtools/releases/download/1.4/msys32-2016-01-07.exe) is you are on 32 bit Windows.
@@ -30,9 +31,7 @@ To switch between different mingw versions use **config32.bat** and **config64.b
 
 If you are installing it in a location other than the default (*c:\msys64* or *c:\msys32*), after you unpack double-click : **autorebase.bat**
 
-In case you wish to use non-posix environment there are two additional batch files: **win32env.bat** for regular windows console, and **win32con.bat** for fancy looking conemu console.
-
-For a simple terminal use **buildtools.bat**  to start. For a fancy looking one use **conemu.bat**. For more information about Msys2, see [MSYS2 Introduction](http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/). There are also **buildtools_32.bat** and **conemu_32.bat** enforcing mingw32 on 64-bit tools (makes sense if you use combined distribution).
+To open a non-posix shell there are two batch files: **win32env.bat** for regular windows console, and **win32con.bat** for fancy looking conemu console.
 
 **Important** thing is to setup your git environment first
 ```sh
@@ -74,6 +73,16 @@ To update all installed packages to current:
 ```sh
 pacman -Su
 ```
+
+<a name="advanced"/>
+## Alternative Shells for advanced usage
+For a simple MSYS32 terminal use **buildtools.bat** to start. 
+
+For a fancier looking one use **conemu.bat**. 
+
+There are also **buildtools_32.bat** and **conemu_32.bat** enforcing mingw32 on 64-bit tools (makes sense if you use combined distribution).
+
+For more information about Msys2, see [MSYS2 Introduction](http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/). 
 
 <a name="optional"/>
 ## Optional additional packages
