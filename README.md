@@ -2,7 +2,10 @@
 
 ##### Table of Contents  
 * [Introduction](#introduction)
-* [Installation and building](#installation)  
+* [Installation and building](#installandbuild)  
+  * [Downloads](#downloads)  
+  * [Installation](#installation)  
+  * [Building](#building)  
 * [Updating build tools](#updating)  
 * [Alternative Shells for advanced usage](#advanced)
 * [Optional additional packages](#optional)  
@@ -21,14 +24,17 @@ The MAME development environment for Windows consists of the GCC compiler (by wa
 Source control is handled by github (***https://github.com/mamedev/mame.git***), so you'll need to check out a copy.
 Various modules are disabled by default, such as the MAME interactive debugger, but can be enabled through arguments when building and may require additional MSYS2 packages to be installed.
 
-<a name="installation"/>
+<a name="installandbuild"/>
 ## Installation and building
 
-Downloads:
+<a name="downloads"/>
+### Downloads
 * Windows 64-bit (x64) - [msys64-2016-01-07.exe](https://github.com/mamedev/buildtools/releases/download/1.4/msys64-2016-01-07.exe) 
 * Windows 32-bit (x86) - [msys32-2016-01-07.exe](https://github.com/mamedev/buildtools/releases/download/1.4/msys32-2016-01-07.exe)
 * Dual 32-bit/64-bit - [msys64-32-2016-01-07.exe](https://github.com/mamedev/buildtools/releases/download/1.4/msys64-32-2016-01-07.exe) _(If you have 64-bit Windows but wish to build for both 32-bit and 64-bit. To switch between different mingw versions use **config32.bat** and **config64.bat**)_
 
+<a name="installation"/>
+### Installation
 If you are installing it in a location other than the default (*c:\msys64* or *c:\msys32*), after you unpack double-click : **autorebase.bat**
 
 To open a non-posix shell there are two batch files: **win32env.bat** for regular windows console, and **win32con.bat** for fancy looking conemu console.
@@ -49,6 +55,8 @@ git config --global user.email youremail@something.com
 git config --global user.name "Firstname Lastname"
 ```
 
+<a name="building"/>
+### Building
 Then, to download the MAME source under your Msys2 user's homedir:
 ```sh
 git clone https://github.com/mamedev/mame.git
