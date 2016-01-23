@@ -79,7 +79,7 @@ Similar to package managers on Linux like apt-get, yum etc. MSYS2 can automatica
 To update all installed packages to current:
 
 ```sh
-pacman -Su
+pacman -Syu
 ```
 
 <a name="advanced"/>
