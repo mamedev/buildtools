@@ -194,20 +194,7 @@ If you wish to compile/link with the alternative Clang, go ahead and download **
    ```sh
    pacman -S mingw-w64-i686-clang mingw-w64-i686-clang-analyzer mingw-w64-i686-clang-tools-extra
    ```
-<a name="optional-nodejs"/>
-### NodeJS
-For those that wish to experiment in other directions:
- 
-   **For x64**
-   ```sh
-   pacman -S mingw-w64-x86_64-nodejs
-   ```
-
-   **For x86**
-   ```sh
-   pacman -S mingw-w64-i686-nodejs
-   ```
-
+   
 <a name="manual"/>
 ## Manual steps
 
