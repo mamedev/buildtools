@@ -15,7 +15,6 @@
   * [CCache](#optional-ccache)  
   * [CMake](#optional-cmake)  
   * [DOxygen](#optional-doxygen)  
-* [Manual Steps](#manual)
 
 <a name="introduction"/>
 ## Introduction
@@ -29,9 +28,9 @@ Various modules are disabled by default, such as the MAME interactive debugger, 
 
 <a name="downloads"/>
 ### Downloads
-* Windows 64-bit (x64) - [msys64-2016-01-07.exe](https://github.com/mamedev/buildtools/releases/download/1.4/msys64-2016-01-07.exe) 
-* Windows 32-bit (x86) - [msys32-2016-01-07.exe](https://github.com/mamedev/buildtools/releases/download/1.4/msys32-2016-01-07.exe)
-* Dual 32-bit/64-bit - [msys64-32-2016-01-07.exe](https://github.com/mamedev/buildtools/releases/download/1.4/msys64-32-2016-01-07.exe) _(If you have 64-bit Windows but wish to build for both 32-bit and 64-bit. To switch between different mingw versions use **config32.bat** and **config64.bat**)_
+* Windows 64-bit (x64) - [msys64-2016-02-16.exe](https://github.com/mamedev/buildtools/releases/download/1.5/msys64-2016-02-16.exe) 
+* Windows 32-bit (x86) - [msys32-2016-02-16.exe](https://github.com/mamedev/buildtools/releases/download/1.5/msys32-2016-02-16.exe)
+* Dual 32-bit/64-bit - [msys64-32-2016-02-16.exe](https://github.com/mamedev/buildtools/releases/download/1.5/msys64-32-2016-02-16.exe) _(If you have 64-bit Windows but wish to build for both 32-bit and 64-bit. To switch between different mingw versions use **config32.bat** and **config64.bat**)_
 
 <a name="installation"/>
 ### Installation
@@ -42,11 +41,6 @@ To open a non-posix shell there are two batch files: **win32env.bat** for regula
 **Important** thing is to setup your git environment first
 ```sh
 git config --global core.autocrlf true
-```
-
-Since it can be that some of configuration file have altered, first pull latest from root of your tools:
-```sh
-git pull
 ```
 
 And if you are contributor
@@ -195,69 +189,3 @@ If you wish to compile/link with the alternative Clang, go ahead and download **
    pacman -S mingw-w64-i686-clang mingw-w64-i686-clang-analyzer mingw-w64-i686-clang-tools-extra
    ```
    
-<a name="manual"/>
-## Manual steps
-
-1. Download MSYS2. You can do that by downloading from http://msys2.github.io/ or
-   from our mirror [for 64-bit Windows](https://github.com/mamedev/buildtools/releases/download/1.0/msys2-x86_64-20150916.exe) or [for 32-bit Windows](https://github.com/mamedev/buildtools/releases/download/1.0/msys2-i686-20150916.exe)
-
-2. Run the installer (location can be changed to suite) and let it complete and it will launch an Msys shell
-
-3. Update initial installation
-
-   ```sh
-   pacman --needed -Sy bash pacman pacman-mirrors msys2-runtime
-   ```
-
-4. Type `exit` to close current window and start "MSYS2 Shell" again 
-
-5. Now upgrade already installed packages to current
-
-   ```sh
-   pacman -Su
-   ```
-
-6. Install ConEmu console, `make`, `wget` and `git` tools
-
-   ```sh
-   pacman -S conemu-git make wget git
-   ```
-
-7. Install `mingw` and `gdb` including `python`
-
-   **For x64**
-   ```sh
-   pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-gdb
-   ```
-
-   **For x86**
-   ```sh
-   pacman -S mingw-w64-i686-gcc mingw-w64-i686-gdb
-   ```
-
-8. Go to root folder and download MAME development environment shell scripts
-
-   
-   **For x86**
-   ```sh
-   cd /
-   git clone https://github.com/mamedev/buildtools_x86.git build
-   cd build
-   mv * ..
-   cd ..
-   rm -r -f build
-   exit
-   ```
-
-   **For x64**
-   ```sh
-   cd /
-   git clone https://github.com/mamedev/buildtools_x64.git build
-   cd build
-   mv * ..
-   cd ..
-   rm -r -f build
-   exit
-   ```
-
-9. Finally, start  ```buildtools.bat``` from installed folder (by default it is *C:\msys64* or *c:\msys32*)
