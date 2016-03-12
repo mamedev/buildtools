@@ -177,7 +177,7 @@ Used as build system for some other project that can be handy
    
 <a name="optional-clang"/>
 ### Clang
-If you wish to compile/link with the alternative Clang, go ahead and download **STILL EXPERIMENTAL**:
+If you wish to compile/link with the alternative Clang, go ahead and download:
  
    **For x64**
    ```sh
