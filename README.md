@@ -76,9 +76,9 @@ To update all installed packages to current, from the regular Windows console ru
 pacman -Sy
 pacman -S bash pacman msys2-runtime --noconfirm --needed
 ```
-Next, exit the shell and restart Msys2.
+Next, exit the console and restart Msys2.
 
-Finally, execute:
+Finally, once back at the console, execute:
 ```sh
 pacman -Su --noconfirm
 ```
