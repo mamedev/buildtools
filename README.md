@@ -70,13 +70,13 @@ make
 ## Updating build tools
 
 Similar to package managers on Linux like apt-get, yum etc. MSYS2 can automatically update packages for fixes, security updates etc.
-To update all installed packages to current, from the :
+To update all installed packages to current, from the regular Windows console run the following:
 
 ```sh
 pacman -Sy
 pacman -S bash pacman msys2-runtime --noconfirm --needed
 ```
-Then, exit the shell and restart Msys2.
+Next, exit the shell and restart Msys2.
 
 Finally, execute:
 ```sh
