@@ -36,14 +36,14 @@ Various modules are disabled by default, such as the MAME interactive debugger, 
 ### Installation
 If you are installing it in a location other than the default (*c:\msys64* or *c:\msys32*), after you unpack double-click : **autorebase.bat**
 
-To open a non-posix shell there are two batch files: **win32env.bat** for regular windows console, and **win32con.bat** for fancy looking conemu console.
+To open a non-posix shell there are two batch files: **win32env.bat** for regular Windows console, and **win32con.bat** for fancy looking ConEmu console.
 
 **Important** thing is to setup your git environment first
 ```sh
 git config --global core.autocrlf true
 ```
 
-And if you are contributor
+And if you are a contributor:
 ```sh
 git config --global user.email youremail@something.com
 git config --global user.name "Firstname Lastname"
@@ -70,10 +70,17 @@ make
 ## Updating build tools
 
 Similar to package managers on Linux like apt-get, yum etc. MSYS2 can automatically update packages for fixes, security updates etc.
-To update all installed packages to current:
+To update all installed packages to current, from the :
 
 ```sh
-pacman -Syu
+pacman -Sy
+pacman -S bash pacman msys2-runtime --noconfirm --needed
+```
+Then, exit the shell and restart Msys2.
+
+Finally, execute:
+```sh
+pacman -Su --noconfirm
 ```
 
 <a name="advanced"/>
