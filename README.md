@@ -28,15 +28,15 @@ Various modules are disabled by default, such as the MAME interactive debugger, 
 
 <a name="downloads"/>
 ### Downloads
-* Windows 64-bit (x64) - [msys64-2016-02-16.exe](https://github.com/mamedev/buildtools/releases/download/1.5/msys64-2016-02-16.exe) 
-* Windows 32-bit (x86) - [msys32-2016-02-16.exe](https://github.com/mamedev/buildtools/releases/download/1.5/msys32-2016-02-16.exe)
-* Dual 32-bit/64-bit - [msys64-32-2016-02-16.exe](https://github.com/mamedev/buildtools/releases/download/1.5/msys64-32-2016-02-16.exe) _(If you have 64-bit Windows but wish to build for both 32-bit and 64-bit. To switch between different mingw versions use **config32.bat** and **config64.bat**)_
+* Windows 64-bit (x64) - [msys64-2017-02-05.exe](https://github.com/mamedev/buildtools/releases/download/2.0/msys64-2017-02-05.exe) 
+* Windows 32-bit (x86) - [msys32-2017-02-05.exe](https://github.com/mamedev/buildtools/releases/download/2.0/msys32-2017-02-05.exe)
+* Dual 32-bit/64-bit - [msys64-32-2017-02-05.exe](https://github.com/mamedev/buildtools/releases/download/2.0/msys64-32-2017-02-05.exe) _(If you have 64-bit Windows but wish to build for both 32-bit and 64-bit. To switch between different mingw versions use **config32.bat** and **config64.bat**)_
 
 <a name="installation"/>
 ### Installation
 If you are installing it in a location other than the default (*c:\msys64* or *c:\msys32*), after you unpack double-click : **autorebase.bat**
 
-To open a non-posix shell there are two batch files: **win32env.bat** for regular Windows console, and **win32con.bat** for fancy looking ConEmu console.
+To open a non-posix shell there are two batch files: **win32env.bat** for regular Windows console.
 
 **Important** thing is to setup your git environment first
 ```sh
@@ -85,11 +85,7 @@ pacman -Su --noconfirm
 
 <a name="advanced"/>
 ## Alternative Shells for advanced usage
-For a simple MSYS32 terminal use **buildtools.bat** to start. 
-
-For a fancier looking one use **conemu.bat**. 
-
-There are also **buildtools_32.bat** and **conemu_32.bat** enforcing mingw32 on 64-bit tools (makes sense if you use combined distribution).
+For a simple MSYS32 terminal use **mingw64.exe** to start or **mingw32.exe** . 
 
 For more information about Msys2, see [MSYS2 Introduction](http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/). 
 
