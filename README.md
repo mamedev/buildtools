@@ -28,9 +28,9 @@ Various modules are disabled by default, such as the MAME interactive debugger, 
 
 <a name="downloads"/>
 ### Downloads
-* Windows 64-bit (x64) - [msys64-2017-02-05.exe](https://github.com/mamedev/buildtools/releases/download/2.0/msys64-2017-02-05.exe) 
-* Windows 32-bit (x86) - [msys32-2017-02-05.exe](https://github.com/mamedev/buildtools/releases/download/2.0/msys32-2017-02-05.exe)
-* Dual 32-bit/64-bit - [msys64-32-2017-02-05.exe](https://github.com/mamedev/buildtools/releases/download/2.0/msys64-32-2017-02-05.exe) _(If you have 64-bit Windows but wish to build for both 32-bit and 64-bit. To switch between different mingw versions use **config32.bat** and **config64.bat**)_
+* Windows 64-bit (x64) - [msys64-2017-12-26.exe](https://github.com/mamedev/buildtools/releases/download/3.0/msys64-2017-12-26.exe) 
+* Windows 32-bit (x86) - [msys32-2017-12-26.exe](https://github.com/mamedev/buildtools/releases/download/3.0/msys32-2017-12-26.exe)
+* Dual 32-bit/64-bit - [msys64-32-2017-12-26.exe](https://github.com/mamedev/buildtools/releases/download/3.0/msys64-32-2017-12-26.exe) _(If you have 64-bit Windows but wish to build for both 32-bit and 64-bit. To switch between different mingw versions use **config32.bat** and **config64.bat**)_
 
 <a name="installation"/>
 ### Installation
