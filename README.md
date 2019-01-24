@@ -87,7 +87,7 @@ pacman -Su --noconfirm
 ## Alternative Shells for advanced usage
 For a simple MSYS32 terminal use **mingw64.exe** to start or **mingw32.exe** . 
 
-For more information about Msys2, see [MSYS2 Introduction](http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/). 
+For more information about Msys2, see [MSYS2 Introduction](https://github.com/msys2/msys2/wiki/MSYS2-introduction). 
 
 <a name="optional"/>
 ## Optional additional packages
