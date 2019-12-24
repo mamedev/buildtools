@@ -28,7 +28,7 @@ Various modules are disabled by default, but can be enabled through arguments wh
 
 <a name="downloads"/>
 ### Downloads
-* Dual 32-bit/64-bit - [msys64-32-2019-03-25.exe](https://github.com/mamedev/buildtools/releases/download/4.0/msys64-32-2019-03-25.exe) _(If you have 64-bit Windows but wish to build for both 32-bit and 64-bit. To switch between different mingw versions use **config32.bat** and **config64.bat**)_
+* Dual 32-bit/64-bit - [msys64-32-2019-12-23.exe](https://github.com/mamedev/buildtools/releases/download/5.0/msys64-32-2019-12-23.exe) _(If you have 64-bit Windows but wish to build for both 32-bit and 64-bit. To switch between different mingw versions use **config32.bat** and **config64.bat**)_
 
 <a name="installation"/>
 ### Installation
