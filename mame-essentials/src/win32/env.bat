@@ -9,7 +9,7 @@
 @set MINGW32=
 @set MINGW64=
 @set ADD_PATH=
-@set PATH=C:\Windows\System32;C:\Windows
+@set PATH=%windir%\System32;%windir%
 :: Enhance Path
 @if "%CONFIG_ARCHITECTURE%"=="x86" (
 	@set MINGW32=%MSYS2_ROOT%\mingw32
@@ -27,5 +27,5 @@
 @set PYTHON_EXECUTABLE=%MINGW%\bin\python.exe
 
 @if not exist "%MSYS2_ROOT%\home" (
-	@bash --login /win32/init.sh
+	@bash --login /dev/null
 )
