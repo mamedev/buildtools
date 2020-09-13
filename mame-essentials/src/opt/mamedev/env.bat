@@ -4,7 +4,7 @@
 )
 
 :: Add aliases
-@doskey /macrofile="%MSYS2_ROOT%\win32\aliases"
+@doskey /macrofile="%MSYS2_ROOT%\opt\mamedev\aliases"
 
 @set MINGW32=
 @set MINGW64=
@@ -22,7 +22,7 @@
 )
 @set MINGW_PATH=%MINGW%\bin
 
-@set PATH=%ADD_PATH%;%MSYS2_ROOT%\win32;%MINGW_PATH%;%MSYS2_ROOT%\usr\bin;%PATH%
+@set PATH=%ADD_PATH%;%MSYS2_ROOT%\opt\mamedev;%MINGW_PATH%;%MSYS2_ROOT%\usr\bin;%PATH%
 
 @if not exist "%MSYS2_ROOT%\home" (
 	@bash --login /dev/null
