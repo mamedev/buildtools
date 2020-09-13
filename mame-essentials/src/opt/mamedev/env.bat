@@ -13,10 +13,12 @@
 :: Enhance Path
 @if "%CONFIG_ARCHITECTURE%"=="x86" (
 	@set MINGW32=/mingw32
+	@set PYTHON_EXECUTABLE=/mingw32/bin/python.exe
 	@set MINGW=%MSYS2_ROOT%\mingw32
 	@set prompt=[MINGW32] $p$g
 ) else (
 	@set MINGW64=/mingw64
+	@set PYTHON_EXECUTABLE=/mingw64/bin/python.exe
 	@set MINGW=%MSYS2_ROOT%\mingw64
 	@set prompt=[MINGW64] $p$g
 )
