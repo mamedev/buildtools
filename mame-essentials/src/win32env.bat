@@ -2,4 +2,4 @@
 	mkdir src
 )
 @cd src
-@cmd /k ..\win32\env.bat
+@cmd /k ..\opt\mamedev\env.bat
