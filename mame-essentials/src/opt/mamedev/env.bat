@@ -1,6 +1,6 @@
 :: Find root dir
 @if not defined MSYS2_ROOT (
-    for /f %%i in ("%~dp0\..") do @set MSYS2_ROOT=%%~fi
+    for /f %%i in ("%~dp0\..\..") do @set MSYS2_ROOT=%%~fi
 )
 
 :: Add aliases
