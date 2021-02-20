@@ -5,9 +5,11 @@
 * [Installation and building](#installandbuild)  
   * [Downloads](#downloads)  
   * [Installation](#installation)  
+  * [Windows Terminal](#winterm)  
   * [Building](#building)  
 * [Updating build tools](#updating)  
 * [Alternative Shells for advanced usage](#advanced)
+* [DOSKEY Aliases](#doskey)
 * [Optional additional packages](#optional)  
   * [SDL](#optional-sdl)  
   * [QT5](#optional-qt5)  
@@ -16,50 +18,66 @@
   * [CMake](#optional-cmake)  
   * [DOxygen](#optional-doxygen)  
 
-<a name="introduction"/>
-
 ## Introduction
-The MAME development environment for Windows consists of the GCC compiler (by way of MinGW), and the MSYS2 (POSIX/Unix compatability layer), plus various utilities such as Python and Git. It is available as a prepackaged installer, or can be assembled from upstream components. 
+<a name="introduction"/>
+The MAME development environment for Windows consists of the GCC compiler (by way of MinGW), and the MSYS2 POSIX/Unix compatibility layer, plus various utilities such as Python and Git. It is available as a prepackaged installer, or can be assembled from upstream components. 
 
-Source control is handled by github (***https://github.com/mamedev/mame.git***), so you'll need to check out a copy.
+Source control is handled by GitHub (***https://github.com/mamedev/mame.git***), so you'll need to check out a copy.
 Various modules are disabled by default, but can be enabled through arguments when building and may require additional MSYS2 packages to be installed.
 
-<a name="installandbuild"/>
-
 ## Installation and building
+<a name="installandbuild"/>
 
 <a name="downloads"/>
 
 ### Downloads
-* Dual 32-bit/64-bit - [msys64-32-2019-12-23.exe](https://github.com/mamedev/buildtools/releases/download/5.0/msys64-32-2019-12-23.exe) _(If you have 64-bit Windows but wish to build for both 32-bit and 64-bit. To switch between different mingw versions use **config32.bat** and **config64.bat**)_
-
-<a name="installation"/>
+* [Latest 64-Bit Tools Download](https://github.com/mamedev/buildtools/releases/latest)
 
 ### Installation
-If you are installing it in a location other than the default (*c:\msys64* or *c:\msys32*), after you unpack double-click : **autorebase.bat**
+<a name="installation"/>
 
-To open a non-posix shell there are two batch files: **win32env.bat** for regular Windows console.
+If you are installing it in a location other than the default (*C:\msys64* or *C:\msys32*), after you unpack double-click ``autorebase.bat``
 
-**Important** thing is to setup your git environment first
+To open a non-POSIX shell, use the batch file ``win32env.bat`` for regular Windows console.
+
+**Important** thing is to setup your Git environment first
+
 ```sh
 git config --global core.autocrlf true
 ```
 
 And if you are a contributor:
+
 ```sh
 git config --global user.email youremail@something.com
 git config --global user.name "Firstname Lastname"
 ```
 
-<a name="building"/>
+### Windows Terminal
+<a name="winterm"/>
+If you are using Windows Terminal, you can use the following profile:
+
+```json
+            {
+                "name": "Dev environment (cmd, 64-bit)",
+                "guid": "{a2b7eb3f-22e4-4426-9803-64beab21c193}",
+                "commandline": "cmd c:\\msys64\\win32\\win32env.bat",
+                "startingDirectory": "c:\\msys64\\src",
+                "hidden": false,
+            },
+```
+
+If you don't have MSYS2 installed in the default location, change the path ``c:\\msys64\\`` to wherever you installed the build tools to.
 
 ### Building
-Then, to download the MAME source under your Msys2 user's homedir:
+<a name="building"/>
+Then, to download the MAME source under your MSYS2 user's home directory:
+
 ```sh
 git clone https://github.com/mamedev/mame.git
 ```
 
-Alternatively, locate your existing source tree (drives are mapped to hidden dirs /c etc. under the virtual root):
+Alternatively, locate your existing source tree (drives are mapped to hidden directories, ``/c`` ``/d`` etc. under the virtual root):
 ```sh
 cd /c/Projects/mame
 ```
@@ -69,34 +87,44 @@ And finally to build:
 make
 ```
 
-<a name="updating"/>
-
 ## Updating build tools
 
-Similar to package managers on Linux like apt-get, yum etc. MSYS2 can automatically update packages for fixes, security updates etc.
+<a name="updating"/>
+
+Similar to package managers on Linux like apt-get, yum, etc. MSYS2 can automatically update packages for fixes, security updates etc.
 To update all installed packages to current, from the regular Windows console run the following:
 
 ```sh
 pacman -Sy
 pacman -S bash pacman msys2-runtime --noconfirm --needed
 ```
-Next, exit the console and restart Msys2.
+Next, exit the console and restart MSYS2.
 
 Finally, once back at the console, execute:
 ```sh
 pacman -Su --noconfirm
 ```
 
+## Alternative Shells for advanced usage
+
 <a name="advanced"/>
 
-## Alternative Shells for advanced usage
-For a simple MSYS32 terminal use **mingw64.exe** to start or **mingw32.exe** . 
+For a simple MSYS2 terminal use ``mingw64.exe`` (for 64-bit builds) or ``mingw32.exe`` (for 32-bit builds) to start. 
 
-For more information about Msys2, see [MSYS2 Introduction](https://github.com/msys2/msys2/wiki/MSYS2-introduction). 
+For more information about MSYS2, see [MSYS2 Introduction](https://github.com/msys2/msys2/wiki/MSYS2-introduction). 
 
 <a name="optional"/>
 
+<a name="doskey">
+
+## DOSKEY Aliases
+
+The package includes several DOSKEY aliases for users that prefer to use CMD.EXE as their command line. These default aliases are contained in ``C:\msys64\win32\aliases``.
+
+User-created aliases should go into ``C:\msys64\win32\useraliases`` as that file will not be overwritten on a reinstallation/update of the MSYS2 tools.
+
 ## Optional additional packages
+
 
 <a name="optional-sdl"/>
 
@@ -146,6 +174,7 @@ If you with to build the QMC2 frontend or similar:
 <a name="optional-doxygen"/>
 
 ### Doxygen
+
 To be able to generate the documentation from the source:
 
    ```sh
@@ -155,6 +184,7 @@ To be able to generate the documentation from the source:
 <a name="optional-ccache"/>
 
 ### CCache
+
 To be able to use ccache to speed-up (re)compilation
 
    **For x64**
@@ -166,9 +196,10 @@ To be able to use ccache to speed-up (re)compilation
    ```sh
    pacman -S mingw-w64-i686-ccache 
    ```
-<a name="optional-ccache"/>
+<a name="optional-cmake"/>
 
 ### CMake
+
 Used as build system for some other project that can be handy
 
    **For x64**
@@ -193,6 +224,7 @@ Used as build system for some other project that can be handy
 <a name="optional-clang"/>
 
 ### Clang
+
 If you wish to compile/link with the alternative Clang, go ahead and download:
  
    **For x64**

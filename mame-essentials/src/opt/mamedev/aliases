@@ -2,3 +2,4 @@ gl=git log --oneline --all --graph --decorate  $*
 ls=ls --color $*
 pwd=cd
 clear=cls
+aliases=type "%MSYS2_ROOT%\win32\aliases"&type "%MSYS2_ROOT%\win32\useraliases" 2>nul
