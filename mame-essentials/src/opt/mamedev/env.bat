@@ -6,7 +6,7 @@
 :: Add aliases
 @doskey /macrofile="%MSYS2_ROOT%\opt\mamedev\aliases"
 :: Use "useraliases" for your own custom aliases so they don't get overwritten on a tools reinstall!
-@doskey /macrofile="%MSYS2_ROOT%\win32\useralises" >nul
+@doskey /macrofile="%MSYS2_ROOT%\win32\useralises" 2>nul
 @echo Type "aliases" to get a list of DOSKEY aliases.
 
 @set MINGW32=
