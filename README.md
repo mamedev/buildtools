@@ -2,6 +2,7 @@
 
 ##### Table of Contents  
 * [Introduction](#introduction)
+* [x86/32-bit Windows Builds](#32bitwindows)
 * [Installation and building](#installandbuild)  
   * [Downloads](#downloads)  
   * [Installation](#installation)  
@@ -25,6 +26,10 @@ The MAME development environment for Windows consists of the GCC compiler (by wa
 Source control is handled by GitHub (***https://github.com/mamedev/mame.git***), so you'll need to check out a copy.
 Various modules are disabled by default, but can be enabled through arguments when building and may require additional MSYS2 packages to be installed.
 
+## x86/32-bit Builds
+<a name="32bitwindows"/>
+Please note that 32-bit (x86) builds for Windows are no longer officially supported.
+
 ## Installation and building
 <a name="installandbuild"/>
 
@@ -36,7 +41,7 @@ Various modules are disabled by default, but can be enabled through arguments wh
 ### Installation
 <a name="installation"/>
 
-If you are installing it in a location other than the default (*C:\msys64* or *C:\msys32*), after you unpack double-click ``autorebase.bat``
+If you are installing it in a location other than the default of ``*C:\Users\Public\msys64*``, after you unpack double-click ``autorebase.bat``
 
 To open a non-POSIX shell, use the batch file ``win32env.bat`` for regular Windows console.
 
@@ -61,13 +66,13 @@ If you are using Windows Terminal, you can use the following profile:
             {
                 "name": "Dev environment (cmd, 64-bit)",
                 "guid": "{a2b7eb3f-22e4-4426-9803-64beab21c193}",
-                "commandline": "cmd c:\\msys64\\win32\\win32env.bat",
-                "startingDirectory": "c:\\msys64\\src",
+                "commandline": "cmd C:\\Users\\Public\\msys64\\win32\\win32env.bat",
+                "startingDirectory": "C:\\Users\\Public\\msys64\\src",
                 "hidden": false,
             },
 ```
 
-If you don't have MSYS2 installed in the default location, change the path ``c:\\msys64\\`` to wherever you installed the build tools to.
+If you don't have MSYS2 installed in the default location, change the path ``C:\\Users\\Public\\msys64\\`` to wherever you installed the build tools to.
 
 ### Building
 <a name="building"/>
@@ -119,9 +124,9 @@ For more information about MSYS2, see [MSYS2 Introduction](https://github.com/ms
 
 ## DOSKEY Aliases
 
-The package includes several DOSKEY aliases for users that prefer to use CMD.EXE as their command line. These default aliases are contained in ``C:\msys64\win32\aliases``.
+The package includes several DOSKEY aliases for users that prefer to use CMD.EXE as their command line. These default aliases are contained in ``C:\Users\Public\msys64\win32\aliases``.
 
-User-created aliases should go into ``C:\msys64\win32\useraliases`` as that file will not be overwritten on a reinstallation/update of the MSYS2 tools.
+User-created aliases should go into ``C:\Users\Public\msys64\win32\useraliases`` as that file will not be overwritten on a reinstallation/update of the MSYS2 tools.
 
 ## Optional additional packages
 
@@ -214,7 +219,7 @@ Used as build system for some other project that can be handy
 
    **To build in Windows environment use from build folder:**
    ```sh
-   cmake -G "MinGW Makefiles" .. -DCMAKE_MAKE_PROGRAM=c:\msys64\win32\make.exe
+   cmake -G "MinGW Makefiles" .. -DCMAKE_MAKE_PROGRAM=c:\Users\Public\msys64\win32\make.exe
    ```
    **To build in MSYS environment use from build folder:**
    ```sh
