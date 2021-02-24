@@ -66,8 +66,8 @@ If you are using Windows Terminal, you can use the following profile:
             {
                 "name": "Dev environment (cmd, 64-bit)",
                 "guid": "{a2b7eb3f-22e4-4426-9803-64beab21c193}",
-                "commandline": "cmd C:\\Users\\Public\\msys64\\win32\\win32env.bat",
-                "startingDirectory": "C:\\Users\\Public\\msys64\\src",
+                "commandline": "cmd /c C:\\Users\\Public\\msys64\\win32\\win32env.bat",
+                "startingDirectory": "C:\\Users\\Public\\msys64",
                 "hidden": false,
             },
 ```
