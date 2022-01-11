@@ -32,7 +32,7 @@ Various modules are disabled by default, but can be enabled through arguments wh
 <a name="downloads"/>
 
 ### Downloads
-* 64-bit - [msys64-2021-01-12.exe](https://github.com/mamedev/buildtools/releases/download/7.0/msys64-2021-01-12.exe) _(Only 64-bit tools and libraries are included. To build 32-bit binaries, install the 32-bit MinGW tools, and switch between environments using **config32.bat** and **config64.bat**)_
+* 64-bit - [msys64-2022-01-12.exe](https://github.com/mamedev/buildtools/releases/download/7.0/msys64-2022-01-12.exe) _(Only 64-bit tools and libraries are included. To build 32-bit binaries, install the 32-bit MinGW tools, and switch between environments using **config32.bat** and **config64.bat**)_
 
 <a name="installation"/>
 
