@@ -1,25 +1,26 @@
 # MAME Build Tools
 
-##### Table of Contents  
+##### Table of Contents
 * [Introduction](#introduction)
-* [Installation and building](#installandbuild)  
-  * [Downloads](#downloads)  
-  * [Installation](#installation)  
-  * [Building](#building)  
-* [Updating build tools](#updating)  
+* [Installation and building](#installandbuild)
+  * [Downloads](#downloads)
+  * [Installation](#installation)
+  * [Building](#building)
+* [Updating build tools](#updating)
 * [Alternative Shells for advanced usage](#advanced)
-* [Optional additional packages](#optional)  
-  * [SDL](#optional-sdl)  
-  * [QT5](#optional-qt5)  
-  * [QT4](#optional-qt4)  
-  * [CCache](#optional-ccache)  
-  * [CMake](#optional-cmake)  
-  * [DOxygen](#optional-doxygen)  
+* [Optional additional packages](#optional)
+  * [32-bit tools](#optional-32bit)
+  * [GNU Debugger (gdb)](#optional-gdb)
+  * [QT5](#optional-qt5)
+  * [QT4](#optional-qt4)
+  * [CCache](#optional-ccache)
+  * [CMake](#optional-cmake)
+  * [Clang](#optional-clang)
 
 <a name="introduction"/>
 
 ## Introduction
-The MAME development environment for Windows consists of the GCC compiler (by way of MinGW), and the MSYS2 (POSIX/Unix compatability layer), plus various utilities such as Python and Git. It is available as a prepackaged installer, or can be assembled from upstream components. 
+The MAME development environment for Windows consists of the GCC compiler (by way of MinGW), and the MSYS2 (POSIX/Unix compatability layer), plus various utilities such as Python and Git. It is available as a prepackaged installer, or can be assembled from upstream components.
 
 Source control is handled by github (***https://github.com/mamedev/mame.git***), so you'll need to check out a copy.
 Various modules are disabled by default, but can be enabled through arguments when building and may require additional MSYS2 packages to be installed.
@@ -31,14 +32,14 @@ Various modules are disabled by default, but can be enabled through arguments wh
 <a name="downloads"/>
 
 ### Downloads
-* Dual 32-bit/64-bit - [msys64-32-2019-12-23.exe](https://github.com/mamedev/buildtools/releases/download/5.0/msys64-32-2019-12-23.exe) _(If you have 64-bit Windows but wish to build for both 32-bit and 64-bit. To switch between different mingw versions use **config32.bat** and **config64.bat**)_
+* 64-bit - [msys64-2021-01-12.exe](https://github.com/mamedev/buildtools/releases/download/7.0/msys64-2021-01-12.exe) _(Only 64-bit tools and libraries are included. To build 32-bit binaries, install the 32-bit MinGW tools, and switch between environments using **config32.bat** and **config64.bat**)_
 
 <a name="installation"/>
 
 ### Installation
-If you are installing it in a location other than the default (*c:\msys64* or *c:\msys32*), after you unpack double-click : **autorebase.bat**
+If you are installing it in a location other than the default (*C:\Users\Public\msys64*), after you unpack double-click : **autorebase.bat**
 
-To open a non-posix shell there are two batch files: **win32env.bat** for regular Windows console.
+To open a non-POSIX shell there is a batch file: **win32env.bat** for regular Windows console.
 
 **Important** thing is to setup your git environment first
 ```sh
@@ -90,27 +91,41 @@ pacman -Su --noconfirm
 <a name="advanced"/>
 
 ## Alternative Shells for advanced usage
-For a simple MSYS32 terminal use **mingw64.exe** to start or **mingw32.exe** . 
+For a simple MSYS32 terminal use **mingw64.exe** to start or (or **mingw32.exe** for a 32-bit environment).
 
-For more information about Msys2, see [MSYS2 Introduction](https://github.com/msys2/msys2/wiki/MSYS2-introduction). 
+For more information about MSYS2, see [MSYS2 Introduction](https://github.com/msys2/msys2/wiki/MSYS2-introduction).
 
 <a name="optional"/>
 
 ## Optional additional packages
 
-<a name="optional-sdl"/>
 
-### SDL
-If you wish to build with the SDL renderer:
+<a name="optional-32bit"/>
 
-   **For x64**
+### 32-bit tools
+If you wish to build 32-bit binaries:
    ```sh
-   pacman -S mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_ttf
+   pacman -S mingw-w64-i686-gcc mingw-w64-i686-libc++ mingw-w64-i686-lld mingw-w64-i686-python mingw-w64-i686-SDL2 mingw-w64-i686-SDL2_ttf
    ```
 
-   **For x86**
+<a name="optional-gdb"/>
+
+### GNU Debugger (gdb)
+If you wish to debug with gdb:
+
+   **For MSYS2 x64**
    ```sh
-   pacman -S mingw-w64-i686-SDL2 mingw-w64-i686-SDL2_ttf
+   pacman -S gdb
+   ```
+
+   **For MinGW x64**
+   ```sh
+   pacman -S mingw-w64-x86_64-gdb
+   ```
+
+   **For MinGW x86**
+   ```sh
+   pacman -S mingw-w64-i686-gdb
    ```
 
 <a name="optional-qt5"/>
@@ -143,15 +158,6 @@ If you with to build the QMC2 frontend or similar:
    pacman -S mingw-w64-i686-qt4
    ```
 
-<a name="optional-doxygen"/>
-
-### Doxygen
-To be able to generate the documentation from the source:
-
-   ```sh
-   pacman -S doxygen 
-   ```
-
 <a name="optional-ccache"/>
 
 ### CCache
@@ -159,26 +165,27 @@ To be able to use ccache to speed-up (re)compilation
 
    **For x64**
    ```sh
-   pacman -S mingw-w64-x86_64-ccache 
+   pacman -S mingw-w64-x86_64-ccache
    ```
 
    **For x86**
    ```sh
-   pacman -S mingw-w64-i686-ccache 
+   pacman -S mingw-w64-i686-ccache
    ```
-<a name="optional-ccache"/>
+
+<a name="optional-cmake"/>
 
 ### CMake
 Used as build system for some other project that can be handy
 
    **For x64**
    ```sh
-   pacman -S mingw-w64-x86_64-cmake 
+   pacman -S mingw-w64-x86_64-cmake
    ```
 
    **For x86**
    ```sh
-   pacman -S mingw-w64-i686-cmake 
+   pacman -S mingw-w64-i686-cmake
    ```
 
    **To build in Windows environment use from build folder:**
@@ -189,19 +196,18 @@ Used as build system for some other project that can be handy
    ```sh
    cmake -G "MSYS Makefiles" ..
    ```
-   
+
 <a name="optional-clang"/>
 
 ### Clang
 If you wish to compile/link with the alternative Clang, go ahead and download:
- 
+
    **For x64**
    ```sh
-   pacman -S mingw-w64-x86_64-clang mingw-w64-x86_64-clang-analyzer mingw-w64-x86_64-clang-tools-extra 
+   pacman -S mingw-w64-x86_64-clang mingw-w64-x86_64-clang-analyzer mingw-w64-x86_64-clang-tools-extra
    ```
 
    **For x86**
    ```sh
    pacman -S mingw-w64-i686-clang mingw-w64-i686-clang-analyzer mingw-w64-i686-clang-tools-extra
    ```
-   
